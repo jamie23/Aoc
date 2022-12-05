@@ -1,6 +1,6 @@
 fun main() {
-    fun part1(input: List<String>) =
-        input.map { s ->
+    fun part1(input: List<String>) = input
+        .map { s ->
             listOf(
                 s.substring(0, s.length / 2),
                 s.substring(
@@ -8,8 +8,8 @@ fun main() {
                 )
             )
         }
-            .map { it.commonChar() }
-            .sumOf { it.calculatePriority() }
+        .map { it.commonChar() }
+        .sumOf { it.calculatePriority() }
 
     fun part2(input: List<String>) = input
         .chunked(3)
